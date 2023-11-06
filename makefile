@@ -1,20 +1,17 @@
 default:
 	@cat makefile
 
-synthetic_data.csv:
-	wget https://gist.github.com/Niarfe/25100a860cbb660150a3fec87378d8ac/synthetic_data.csv
+env:
+	< your code here to set up environment folder called env >
+	< your code here to install packages in requirements.txt >
 
-square_wave.png:
-	gnuplot -e "set datafile separator ','; set term png; set output 'square_wave.png'; plot 'synthetic_data.csv' using 1:2 with lines"
+run:
+	< your code here to call bin/clockdemo_param.py with python, and not echo the command, i.e. silently >
 
-fibonachi.png:
-	gnuplot -e "set datafile separator ','; set term png; set output 'fibonachi.png'; plot 'synthetic_data.csv' using 1:3 with lines"
+< your code here so the following task ALWAYS gets called, even though the directory exists >
 
-clean:
-	rm *.csv *.png
-
-all_images:
-	gnuplot -e "set datafile separator ','; set term png; set output 'square_wave.png'; plot 'synthetic_data.csv' using 1:2 with lines"  -e "set datafile separator ','; set term png; set output 'fibonachi.png'; plot 'synthetic_data.csv' using 1:3 with lines"
+tests:
+	pytest -vv tests
 
 
 
