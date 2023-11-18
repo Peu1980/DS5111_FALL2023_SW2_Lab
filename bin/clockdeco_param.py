@@ -19,6 +19,7 @@ def snooze5111(seconds):
     time.sleep(seconds)
     return(str(seconds))
 
+
 if __name__ == '__main__':
 
     @clock()
