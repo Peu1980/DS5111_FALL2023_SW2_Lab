@@ -2,16 +2,20 @@ default:
 	@cat makefile
 
 env:
-	< your code here to set up environment folder called env >
-	< your code here to install packages in requirements.txt >
+	python3 -m venv env
+	. env/bin/activate; pip install -r requirements.txt
+	#. env/bin/activate; python -m pip install pytest
 
+show:
+	. env/bin/activate; pip list
 run:
-	< your code here to call bin/clockdemo_param.py with python, and not echo the command, i.e. silently >
+	@. env/bin/activate; python3 bin/clockdeco_param.py
 
-< your code here so the following task ALWAYS gets called, even though the directory exists >
+#Code to get ALWAYS called the following task even though the tests directory exists
+.PHONY: tests
 
 tests:
-	pytest -vv tests
+	. env/bin/activate; pytest -vv tests
 
 
 
