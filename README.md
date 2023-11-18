@@ -17,6 +17,7 @@ The code provided to you for the test file starts with two lines, seemingly to a
 # It is to append the running directory, so that the  clockdeco_param.py is sourcing from from the bin folder.
 
 
+
 #############################################################
 ## Extra Credit
 #############################################################
@@ -28,10 +29,13 @@ The code provided to you for the test file starts with two lines, seemingly to a
 # any folder in the repository and any file ending _pycache
 
 1 point: do a pip list or pip freeze and call out versions of the pytest and pylint packages in your requirements.txt. Include them in your requirements.txt, and for the extra credit, just add a note reminding me you included them.
-# 
+# They are included in requirements.txt
+# pytest==7.4.3
+# pylint==3.0.2
 
 1 points: In the sample code from the book, why does the line if __name__=="__main__": allow the script to run if called directly, but not otherwise? What's going on there?
-# 
+# Anything under if __name__=="__main__": is executed when the script is called directly. It is not however execute if the script is imported as a module.
 
 1 point: If you add two print statements, (or any statements for that matter), one above and one below the if __name__... line, what would happen when I do an import of the file? What happens when I call the file directly with python <filename>. Most importantly, why?.
-# 
+# When import the file as a module, it will only execute the print statment above the if __name__... When you call the file directly, it will execute the print statement under if __name__... This is because, when you import the script as a module, it only defines what is outside of if __name__... and the if statement becomes False. However, when you run the script directly, the if statement becomes True.
+
