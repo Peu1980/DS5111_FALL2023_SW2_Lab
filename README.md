@@ -28,5 +28,10 @@ The code provided to you for the test file starts with two lines, seemingly to a
 # any folder in the repository and any file ending _pycache
 
 1 point: do a pip list or pip freeze and call out versions of the pytest and pylint packages in your requirements.txt. Include them in your requirements.txt, and for the extra credit, just add a note reminding me you included them.
+# 
+
 1 points: In the sample code from the book, why does the line if __name__=="__main__": allow the script to run if called directly, but not otherwise? What's going on there?
+# 
+
 1 point: If you add two print statements, (or any statements for that matter), one above and one below the if __name__... line, what would happen when I do an import of the file? What happens when I call the file directly with python <filename>. Most importantly, why?.
+# 
