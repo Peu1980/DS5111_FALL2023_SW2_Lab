@@ -20,4 +20,7 @@ tests:
 perceptron.py:
 	sudo wget -P bin/ https://github.com/EfrainOlivaresUVA/Machine-Learning-Test-by-Test/blob/master/Chapter%202%20Redux/perceptron.py
 
+lint:
+	sed -i "s/indent-string='    '/indent-string='  '/" pylintrc
+	. env/bin/activate; pylint bin/perceptron.py
 
