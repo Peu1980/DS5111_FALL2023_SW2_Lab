@@ -18,6 +18,6 @@ tests:
 	. env/bin/activate; pytest -vv tests
 
 perceptron.py:
-	sudo wget -P /bin https://github.com/EfrainOlivaresUVA/Machine-Learning-Test-by-Test/blob/master/Chapter%202%20Redux/perceptron.py
+	sudo wget -P bin/ https://github.com/EfrainOlivaresUVA/Machine-Learning-Test-by-Test/blob/master/Chapter%202%20Redux/perceptron.py
 
 
