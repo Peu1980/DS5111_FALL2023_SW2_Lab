@@ -18,4 +18,4 @@ class Perceptron:
     if len(input2) == 0:
       return None
     input2 = input2 - 1
-    return int(0 < sum([x[0]*x[1] for x in zip(self._weights, input2)]))
+    return int(0 < sum([input3*label3 for input3, label3 in zip(self._weights, input2)]))
