@@ -11,8 +11,8 @@ class Perceptron:
     for _ in range(5000):
       for input1, label in zip(dummied_inputs, labels):
         label_delta = label - self.predict(input1)
-        for index, x in enumerate(input1):
-          self._weights[index] += .1 * x * label_delta
+        for index, value in enumerate(input1):
+          self._weights[index] += .1 * value * label_delta
   def predict(self, input2):
     """This function is predict"""
     if len(input2) == 0:
