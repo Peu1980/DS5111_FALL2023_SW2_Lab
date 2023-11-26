@@ -10,6 +10,7 @@ show:
 	. env/bin/activate; pip list
 run:
 	@. env/bin/activate; python3 bin/clockdeco_param.py
+	@. env/bin/activate; python3 bin/perceptron.py
 
 #Code to get ALWAYS called the following task even though the tests directory exists
 .PHONY: tests
